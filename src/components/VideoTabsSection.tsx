@@ -4,24 +4,24 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const VideoTabsSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-white" id="videos">
+    <section className="py-16 md:py-24 bg-black" id="videos">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
-            Veja abaixo como é fácil colocar a Inteligência Artificial para trabalhar 24 horas por dia para você e o melhor, sem te cobrar férias ou décimo terceiro
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-[#FFBD2F]">
+            Veja abaixo como é fácil colocar a Inteligência Artificial para trabalhar 24 horas por dia para você
           </h2>
 
           <Tabs defaultValue="tab1" className="w-full">
-            <TabsList className="w-full mb-6 grid grid-cols-2">
-              <TabsTrigger value="tab1" className="text-sm md:text-base">
+            <TabsList className="w-full mb-6 grid grid-cols-2 bg-[#292826] border border-[#FFBD2F]/20">
+              <TabsTrigger value="tab1" className="text-sm md:text-base data-[state=active]:bg-[#FFBD2F] data-[state=active]:text-black">
                 Flowbuilder Demo
               </TabsTrigger>
-              <TabsTrigger value="tab2" className="text-sm md:text-base">
+              <TabsTrigger value="tab2" className="text-sm md:text-base data-[state=active]:bg-[#FFBD2F] data-[state=active]:text-black">
                 Video Adicional
               </TabsTrigger>
             </TabsList>
             <TabsContent value="tab1" className="mt-4">
-              <div className="aspect-video w-full bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-video w-full bg-[#292826] rounded-lg overflow-hidden shadow-lg border border-[#292826]/80">
                 <iframe 
                   className="w-full h-full"
                   src="https://www.youtube.com/embed/dQw4w9WgXcQ"
@@ -33,9 +33,9 @@ const VideoTabsSection = () => {
               </div>
             </TabsContent>
             <TabsContent value="tab2" className="mt-4">
-              <div className="aspect-video w-full bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-video w-full bg-[#292826] rounded-lg overflow-hidden shadow-lg border border-[#292826]/80">
                 <div className="w-full h-full flex items-center justify-center">
-                  <p className="text-gray-500">Vídeo será adicionado em breve.</p>
+                  <p className="text-gray-300">Vídeo será adicionado em breve.</p>
                 </div>
               </div>
             </TabsContent>

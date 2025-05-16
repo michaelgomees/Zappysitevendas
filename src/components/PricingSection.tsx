@@ -60,13 +60,13 @@ const plans = [
 
 const PricingSection = () => {
   return (
-    <section id="precos" className="py-16 md:py-24 bg-gray-50">
+    <section id="precos" className="py-16 md:py-24 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#FFBD2F]">
             Planos para todos os tamanhos de negócio
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-300">
             Escolha o plano ideal para suas necessidades e comece a transformar suas conversas em vendas.
           </p>
         </div>
@@ -75,34 +75,34 @@ const PricingSection = () => {
           {plans.map((plan) => (
             <Card 
               key={plan.id} 
-              className={`border ${plan.popular ? 'border-primary ring-2 ring-primary/20' : 'border-gray-200'} shadow-lg relative`}
+              className={`bg-[#292826] border ${plan.popular ? 'border-[#FFBD2F] ring-2 ring-[#FFBD2F]/20' : 'border-[#292826]/50'} shadow-lg relative hover-glow`}
             >
               {plan.popular && (
-                <div className="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+                <div className="absolute top-0 right-0 bg-[#FFBD2F] text-black text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
                   Mais popular
                 </div>
               )}
-              <CardHeader className={plan.popular ? 'bg-primary/5' : ''}>
-                <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
-                <CardDescription>{plan.description}</CardDescription>
+              <CardHeader className={plan.popular ? 'bg-[#FFBD2F]/5' : ''}>
+                <CardTitle className="text-2xl font-bold text-white">{plan.name}</CardTitle>
+                <CardDescription className="text-gray-300">{plan.description}</CardDescription>
               </CardHeader>
               <CardContent className="pt-6">
                 <div className="mb-6">
-                  <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-gray-600">{plan.period}</span>
+                  <span className="text-4xl font-bold text-[#FFBD2F]">{plan.price}</span>
+                  <span className="text-gray-300">{plan.period}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, index) => (
                     <li key={index} className="flex items-start">
-                      <CheckCircle className={`${plan.popular ? 'text-primary' : 'text-green-500'} mr-2 flex-shrink-0`} size={20} />
-                      <span>{feature}</span>
+                      <CheckCircle className={`${plan.popular ? 'text-[#FFBD2F]' : 'text-green-500'} mr-2 flex-shrink-0`} size={20} />
+                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
               <CardFooter>
                 <Button 
-                  className={`w-full ${plan.popular ? 'bg-primary hover:bg-primary/90' : 'bg-gray-800 hover:bg-gray-700'} text-white`}
+                  className={`w-full ${plan.popular ? 'bg-[#FFBD2F] hover:bg-[#FFBD2F]/90 text-black' : 'bg-[#292826] hover:bg-[#292826]/80 text-white border border-[#FFBD2F]/30'}`}
                 >
                   {plan.cta}
                 </Button>

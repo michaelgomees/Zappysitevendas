@@ -42,13 +42,13 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section id="beneficios" className="py-16 md:py-24 bg-white">
+    <section id="beneficios" className="py-16 md:py-24 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#FFBD2F]">
             Por que escolher nossa plataforma?
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-300">
             Transforme sua estratégia digital com benefícios que realmente fazem a diferença para seu negócio.
           </p>
         </div>
@@ -57,13 +57,13 @@ const BenefitsSection = () => {
           {benefits.map((benefit) => (
             <div 
               key={benefit.id}
-              className="bg-white border border-gray-100 rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow"
+              className="bg-[#292826] rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow border border-[#292826]/80 hover-glow"
             >
-              <div className="text-4xl mb-4 bg-purple-100 w-16 h-16 flex items-center justify-center rounded-lg">
+              <div className="text-4xl mb-4 bg-[#FFBD2F]/20 w-16 h-16 flex items-center justify-center rounded-lg">
                 {benefit.icon}
               </div>
-              <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-              <p className="text-gray-600">{benefit.description}</p>
+              <h3 className="text-xl font-bold mb-3 text-[#FFBD2F]">{benefit.title}</h3>
+              <p className="text-gray-300">{benefit.description}</p>
             </div>
           ))}
         </div>
