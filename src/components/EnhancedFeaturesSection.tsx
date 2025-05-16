@@ -12,7 +12,7 @@ import {
   Users,
   Brain,
   Smartphone,
-  Devices
+  Dices
 } from 'lucide-react';
 
 interface FeatureBoxProps {
@@ -88,7 +88,7 @@ const features = [
     description: "Mais de um WhatsApp na sua conta para realizar atendimentos."
   },
   {
-    icon: <Devices size={48} strokeWidth={1.5} />,
+    icon: <Dices size={48} strokeWidth={1.5} />,
     title: "Multi-Aparelhos",
     description: "Use sua conta nos seus celulares e nos seus computadores."
   }
