@@ -94,3 +94,20 @@ html {
 html :target {
   scroll-margin-top: 100px;
 }
+
+/* Estilos para tabs de vídeo */
+.tabs-container .tab-content {
+  display: none;
+}
+
+.tabs-container .tab-content.active {
+  display: block;
+}
+
+.feature-icon {
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover .feature-icon {
+  transform: scale(1.1);
+}

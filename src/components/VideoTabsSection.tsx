@@ -1,0 +1,49 @@
+
+import React from 'react';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+
+const VideoTabsSection = () => {
+  return (
+    <section className="py-16 md:py-24 bg-white" id="videos">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+            Veja abaixo como é fácil colocar a Inteligência Artificial para trabalhar 24 horas por dia para você e o melhor, sem te cobrar férias ou décimo terceiro
+          </h2>
+
+          <Tabs defaultValue="tab1" className="w-full">
+            <TabsList className="w-full mb-6 grid grid-cols-2">
+              <TabsTrigger value="tab1" className="text-sm md:text-base">
+                Flowbuilder Demo
+              </TabsTrigger>
+              <TabsTrigger value="tab2" className="text-sm md:text-base">
+                Video Adicional
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="tab1" className="mt-4">
+              <div className="aspect-video w-full bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                <iframe 
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Flowbuilder Demonstration"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </TabsContent>
+            <TabsContent value="tab2" className="mt-4">
+              <div className="aspect-video w-full bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                <div className="w-full h-full flex items-center justify-center">
+                  <p className="text-gray-500">Vídeo será adicionado em breve.</p>
+                </div>
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default VideoTabsSection;
