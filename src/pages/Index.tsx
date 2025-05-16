@@ -6,6 +6,8 @@ import BenefitsSection from '@/components/BenefitsSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import VideoTabsSection from '@/components/VideoTabsSection';
 import EnhancedFeaturesSection from '@/components/EnhancedFeaturesSection';
+import MobilitySection from '@/components/MobilitySection';
+import ConfigurationServiceSection from '@/components/ConfigurationServiceSection';
 import PricingSection from '@/components/PricingSection';
 import FAQSection from '@/components/FAQSection';
 import CTASection from '@/components/CTASection';
@@ -19,8 +21,10 @@ const Index = () => {
       <HeroSection />
       <BenefitsSection />
       <FeaturesSection />
+      <MobilitySection />
       <VideoTabsSection />
       <EnhancedFeaturesSection />
+      <ConfigurationServiceSection />
       <PricingSection />
       <FAQSection />
       <CTASection />

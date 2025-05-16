@@ -21,10 +21,11 @@ const Header = () => {
         </div>
 
         {/* Menu desktop */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-6">
           <a href="#beneficios" className="text-gray-700 hover:text-primary font-medium transition-colors">Benefícios</a>
           <a href="#funcionalidades" className="text-gray-700 hover:text-primary font-medium transition-colors">Funcionalidades</a>
-          <a href="#depoimentos" className="text-gray-700 hover:text-primary font-medium transition-colors">Depoimentos</a>
+          <a href="#mobilidade" className="text-gray-700 hover:text-primary font-medium transition-colors">Mobilidade</a>
+          <a href="#configuracao" className="text-gray-700 hover:text-primary font-medium transition-colors">Configuração</a>
           <a href="#precos" className="text-gray-700 hover:text-primary font-medium transition-colors">Preços</a>
           <a href="#faq" className="text-gray-700 hover:text-primary font-medium transition-colors">FAQ</a>
           <Button className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 text-white">
@@ -46,7 +47,8 @@ const Header = () => {
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a href="#beneficios" className="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Benefícios</a>
             <a href="#funcionalidades" className="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Funcionalidades</a>
-            <a href="#depoimentos" className="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Depoimentos</a>
+            <a href="#mobilidade" className="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Mobilidade</a>
+            <a href="#configuracao" className="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Configuração</a>
             <a href="#precos" className="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Preços</a>
             <a href="#faq" className="text-gray-700 hover:text-primary font-medium py-2 transition-colors">FAQ</a>
             <Button className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 text-white w-full">
