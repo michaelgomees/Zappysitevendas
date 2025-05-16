@@ -11,8 +11,8 @@ import ConfigurationServiceSection from '@/components/ConfigurationServiceSectio
 import PricingSection from '@/components/PricingSection';
 import FAQSection from '@/components/FAQSection';
 import CTASection from '@/components/CTASection';
-import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
+import ZappynSection from '@/components/ZappynSection';
 
 const Index = () => {
   return (
@@ -24,11 +24,11 @@ const Index = () => {
       <MobilitySection />
       <VideoTabsSection />
       <EnhancedFeaturesSection />
+      <ZappynSection />
       <ConfigurationServiceSection />
       <PricingSection />
       <FAQSection />
       <CTASection />
-      <ContactForm />
       <Footer />
     </div>
   );

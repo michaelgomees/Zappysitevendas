@@ -11,31 +11,37 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+    <header className="fixed w-full bg-black/90 backdrop-blur-md z-50 shadow-sm border-b border-[#292826]">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center">
           {/* Logo - facilmente substituível */}
           <a href="/" className="flex items-center">
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">Black Conversa</span>
+            <img 
+              src="/lovable-uploads/f0b58f0b-0691-40da-9ede-94eb8346ef01.png" 
+              alt="ZappyBot" 
+              className="h-10 mr-2"
+            />
+            <span className="text-2xl font-bold text-[#ffbd2f]">ZappyBot</span>
           </a>
         </div>
 
         {/* Menu desktop */}
         <nav className="hidden md:flex items-center space-x-6">
-          <a href="#beneficios" className="text-gray-700 hover:text-primary font-medium transition-colors">Benefícios</a>
-          <a href="#funcionalidades" className="text-gray-700 hover:text-primary font-medium transition-colors">Funcionalidades</a>
-          <a href="#mobilidade" className="text-gray-700 hover:text-primary font-medium transition-colors">Mobilidade</a>
-          <a href="#configuracao" className="text-gray-700 hover:text-primary font-medium transition-colors">Configuração</a>
-          <a href="#precos" className="text-gray-700 hover:text-primary font-medium transition-colors">Preços</a>
-          <a href="#faq" className="text-gray-700 hover:text-primary font-medium transition-colors">FAQ</a>
-          <Button className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 text-white">
+          <a href="#beneficios" className="text-white hover:text-[#ffbd2f] font-medium transition-colors">Benefícios</a>
+          <a href="#funcionalidades" className="text-white hover:text-[#ffbd2f] font-medium transition-colors">Funcionalidades</a>
+          <a href="#mobilidade" className="text-white hover:text-[#ffbd2f] font-medium transition-colors">Mobilidade</a>
+          <a href="#zappyn" className="text-white hover:text-[#ffbd2f] font-medium transition-colors">Zappyn</a>
+          <a href="#configuracao" className="text-white hover:text-[#ffbd2f] font-medium transition-colors">Configuração</a>
+          <a href="#precos" className="text-white hover:text-[#ffbd2f] font-medium transition-colors">Preços</a>
+          <a href="#faq" className="text-white hover:text-[#ffbd2f] font-medium transition-colors">FAQ</a>
+          <Button className="bg-[#ffbd2f] hover:bg-[#ffbd2f]/90 text-black">
             Começar agora
           </Button>
         </nav>
 
         {/* Menu mobile toggle */}
         <div className="md:hidden">
-          <button onClick={toggleMobileMenu} className="text-gray-700 hover:text-primary">
+          <button onClick={toggleMobileMenu} className="text-white hover:text-[#ffbd2f]">
             {mobileMenuOpen ? <X size={24} /> : <MenuIcon size={24} />}
           </button>
         </div>
@@ -43,15 +49,16 @@ const Header = () => {
 
       {/* Menu mobile */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white">
+        <div className="md:hidden bg-[#292826]">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <a href="#beneficios" className="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Benefícios</a>
-            <a href="#funcionalidades" className="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Funcionalidades</a>
-            <a href="#mobilidade" className="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Mobilidade</a>
-            <a href="#configuracao" className="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Configuração</a>
-            <a href="#precos" className="text-gray-700 hover:text-primary font-medium py-2 transition-colors">Preços</a>
-            <a href="#faq" className="text-gray-700 hover:text-primary font-medium py-2 transition-colors">FAQ</a>
-            <Button className="bg-gradient-to-r from-primary to-purple-600 hover:opacity-90 text-white w-full">
+            <a href="#beneficios" className="text-white hover:text-[#ffbd2f] font-medium py-2 transition-colors">Benefícios</a>
+            <a href="#funcionalidades" className="text-white hover:text-[#ffbd2f] font-medium py-2 transition-colors">Funcionalidades</a>
+            <a href="#mobilidade" className="text-white hover:text-[#ffbd2f] font-medium py-2 transition-colors">Mobilidade</a>
+            <a href="#zappyn" className="text-white hover:text-[#ffbd2f] font-medium py-2 transition-colors">Zappyn</a>
+            <a href="#configuracao" className="text-white hover:text-[#ffbd2f] font-medium py-2 transition-colors">Configuração</a>
+            <a href="#precos" className="text-white hover:text-[#ffbd2f] font-medium py-2 transition-colors">Preços</a>
+            <a href="#faq" className="text-white hover:text-[#ffbd2f] font-medium py-2 transition-colors">FAQ</a>
+            <Button className="bg-[#ffbd2f] hover:bg-[#ffbd2f]/90 text-black w-full">
               Começar agora
             </Button>
           </div>

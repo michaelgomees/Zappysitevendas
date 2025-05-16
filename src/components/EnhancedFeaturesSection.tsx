@@ -22,12 +22,12 @@ interface FeatureBoxProps {
 }
 
 const FeatureBox = ({ icon, title, description }: FeatureBoxProps) => (
-  <div className="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
-    <div className="text-primary mb-4">
+  <div className="flex flex-col items-center p-6 bg-[#292826] rounded-xl shadow-md hover:shadow-lg transition-shadow border border-[#ffbd2f]/20 hover:border-[#ffbd2f]/50">
+    <div className="text-[#ffbd2f] mb-4 feature-icon">
       {icon}
     </div>
-    <h3 className="text-lg font-semibold mb-2 text-primary">{title}</h3>
-    <p className="text-center text-gray-600">{description}</p>
+    <h3 className="text-lg font-semibold mb-2 text-[#ffbd2f]">{title}</h3>
+    <p className="text-center text-gray-300">{description}</p>
   </div>
 );
 
@@ -96,13 +96,13 @@ const features = [
 
 const EnhancedFeaturesSection = () => {
   return (
-    <section id="recursos" className="py-16 md:py-24 bg-gray-50">
+    <section id="recursos" className="py-16 md:py-24 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#ffbd2f]">
             Conheça as funções do nosso criador de fluxos
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-white">
             Tenha uma poderosa automação e simples de usar para mudar o jogo do seu negócio.
           </p>
         </div>
