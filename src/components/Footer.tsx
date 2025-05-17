@@ -14,10 +14,9 @@ const Footer = () => {
             <div className="flex items-center justify-center md:justify-start mb-4">
               <img 
                 src="/lovable-uploads/f0b58f0b-0691-40da-9ede-94eb8346ef01.png" 
-                alt="ZappyBot" 
-                className="h-16 object-contain mr-2"
+                alt="Logo" 
+                className="h-16 object-contain"
               />
-              <span className="text-2xl font-bold text-[#ffbd2f]">ZAPPY BOT</span>
             </div>
             <p className="text-gray-400 max-w-xs text-center md:text-left">
               Transformando conversas digitais em resultados para o seu negócio.
@@ -58,7 +57,7 @@ const Footer = () => {
         <div className="border-t border-[#292826] pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              &copy; {currentYear} ZappyBot. Todos os direitos reservados.
+              &copy; {currentYear} Todos os direitos reservados.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-400 hover:text-[#ffbd2f] transition-colors text-sm">Termos de Uso</a>

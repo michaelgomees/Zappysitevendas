@@ -18,10 +18,9 @@ const Header = () => {
           <a href="/" className="flex items-center">
             <img 
               src="/lovable-uploads/f0b58f0b-0691-40da-9ede-94eb8346ef01.png" 
-              alt="ZappyBot" 
-              className="h-10 mr-2"
+              alt="Logo" 
+              className="h-10"
             />
-            <span className="text-2xl font-bold text-[#ffbd2f]">ZappyBot</span>
           </a>
         </div>
 
