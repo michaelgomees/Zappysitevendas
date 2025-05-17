@@ -15,7 +15,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/f0b58f0b-0691-40da-9ede-94eb8346ef01.png" 
                 alt="Logo" 
-                className="h-16 object-contain"
+                className="h-20 object-contain"
               />
             </div>
             <p className="text-gray-400 max-w-xs text-center md:text-left">
