@@ -25,19 +25,14 @@ const ZappynSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="flex justify-center">
             <div className="relative">
-              <div className="bg-[#292826] rounded-full p-6 border-2 border-[#ffbd2f]/30">
+              <div className="bg-[#292826] rounded-xl p-4 border-2 border-[#ffbd2f]/30">
                 <img
-                  src="/lovable-uploads/f0b58f0b-0691-40da-9ede-94eb8346ef01.png"
-                  alt="Zappyn - Assistente de IA"
-                  className="w-64 h-64 object-contain"
+                  src="/lovable-uploads/c774c106-fa85-4635-9fc0-cc53adae1aeb.png"
+                  alt="Assistente de IA Zappyn"
+                  className="w-72 h-72 object-contain"
                 />
               </div>
-              <div className="absolute -top-4 -right-4 bg-[#ffbd2f] text-black rounded-full p-3">
-                <Clock size={24} />
-              </div>
-              <div className="absolute -bottom-4 -left-4 bg-[#ffbd2f] text-black rounded-full p-3">
-                <MessageCircle size={24} />
-              </div>
+              {/* Ícones removidos conforme solicitado */}
             </div>
           </div>
           
