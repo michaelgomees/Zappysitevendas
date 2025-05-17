@@ -36,7 +36,7 @@ const FeaturesSection = () => {
                   <p className="text-white mb-6">
                     Crie chatbots conversacionais que entendem seus clientes e respondem de forma natural, guiando-os pela jornada de compra.
                   </p>
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3">
                     {['Inteligência artificial avançada', 'Fluxos de conversação personalizáveis', 'Respostas automáticas inteligentes', 'Integração com seu CRM'].map((item, index) => (
                       <li key={index} className="flex items-start">
                         <CheckCircle className="text-[#FFBD2F] mr-2 flex-shrink-0" size={24} />
@@ -44,9 +44,6 @@ const FeaturesSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button className="bg-[#FFBD2F] hover:bg-[#FFBD2F]/90 text-black">
-                    Saiba mais
-                  </Button>
                 </div>
                 <div className="w-full md:w-1/2 order-1 md:order-2 rounded-xl overflow-hidden shadow-lg glass-effect">
                   <div className="bg-[#292826] aspect-square">
@@ -75,7 +72,7 @@ const FeaturesSection = () => {
                   <p className="text-white mb-6">
                     Conecte-se com seus clientes onde eles estiverem, mantendo a consistência em todos os pontos de contato.
                   </p>
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3">
                     {['WhatsApp Business API', 'Instagram Direct', 'Facebook Messenger', 'Live chat no site'].map((item, index) => (
                       <li key={index} className="flex items-start">
                         <CheckCircle className="text-[#FFBD2F] mr-2 flex-shrink-0" size={24} />
@@ -83,9 +80,6 @@ const FeaturesSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button className="bg-[#FFBD2F] hover:bg-[#FFBD2F]/90 text-black">
-                    Saiba mais
-                  </Button>
                 </div>
               </div>
 
@@ -96,7 +90,7 @@ const FeaturesSection = () => {
                   <p className="text-white mb-6">
                     Acesse dados detalhados sobre o desempenho das suas conversas e identifique oportunidades de melhoria.
                   </p>
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3">
                     {['Dashboard personalizado', 'Relatórios de conversão', 'Taxa de engajamento', 'Análise de sentimento'].map((item, index) => (
                       <li key={index} className="flex items-start">
                         <CheckCircle className="text-[#FFBD2F] mr-2 flex-shrink-0" size={24} />
@@ -104,9 +98,6 @@ const FeaturesSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button className="bg-[#FFBD2F] hover:bg-[#FFBD2F]/90 text-black">
-                    Saiba mais
-                  </Button>
                 </div>
                 <div className="w-full md:w-1/2 order-1 md:order-2 rounded-xl overflow-hidden shadow-lg glass-effect">
                   <div className="bg-[#292826] aspect-square">
@@ -135,7 +126,7 @@ const FeaturesSection = () => {
                   <p className="text-white mb-6">
                     Gerencie seus leads e clientes em um só lugar, mantendo um histórico completo de interações.
                   </p>
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3">
                     {['Perfil completo do cliente', 'Histórico de conversas', 'Segmentação avançada', 'Automação de follow-up'].map((item, index) => (
                       <li key={index} className="flex items-start">
                         <CheckCircle className="text-[#FFBD2F] mr-2 flex-shrink-0" size={24} />
@@ -143,9 +134,6 @@ const FeaturesSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button className="bg-[#FFBD2F] hover:bg-[#FFBD2F]/90 text-black">
-                    Saiba mais
-                  </Button>
                 </div>
               </div>
             </div>
@@ -168,17 +156,13 @@ const FeaturesSection = () => {
                   Precisa que todos os números trabalhem juntos para impulsionar seu produto? Ou prefere que cada um opere de forma independente? A escolha é sua - e o poder também.
                 </p>
                 
-                <div className="bg-gradient-to-r from-[#292826] to-[#292826]/80 p-6 rounded-lg mb-6 border border-[#FFBD2F]/20 glass-effect hover-glow">
+                <div className="bg-gradient-to-r from-[#292826] to-[#292826]/80 p-6 rounded-lg border border-[#FFBD2F]/20 glass-effect hover-glow">
                   <p className="text-xl font-medium text-[#FFBD2F]">
                     Enquanto outros complicam,<br/>
                     nós simplificamos e<br/>
                     potencializamos.
                   </p>
                 </div>
-                
-                <Button className="bg-[#FFBD2F] hover:bg-[#FFBD2F]/90 text-black">
-                  Experimentar Multi-Whatsapps
-                </Button>
               </div>
               
               <div className="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-lg glass-effect">
