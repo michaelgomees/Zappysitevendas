@@ -23,7 +23,7 @@
     --muted: 38 3% 15%;
     --muted-foreground: 0 0% 70%;
 
-    --accent: 38 3% 25%;
+    --accent: 38 3% 15%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -85,6 +85,7 @@ html :target {
 /* Adicionando efeitos de glassmorphism e animações sutis */
 .glass-effect {
   @apply backdrop-blur-sm bg-[#292826]/80 border border-[#ffbd2f]/10 shadow-lg;
+  transition: all 0.3s ease;
 }
 
 .hover-glow:hover {
@@ -104,4 +105,19 @@ html :target {
 
 .pulse-animation {
   animation: pulse-glow 3s infinite;
+}
+
+/* Adicionando efeitos de hover para cards de funcionalidades */
+.glass-effect:hover {
+  @apply shadow-[0_5px_15px_rgba(255,189,47,0.2)];
+  transform: translateY(-2px);
+}
+
+/* Efeito de transição para ícones */
+.text-[#FFBD2F] {
+  transition: transform 0.2s ease;
+}
+
+li:hover .text-[#FFBD2F] {
+  transform: scale(1.2);
 }
