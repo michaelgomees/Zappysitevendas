@@ -2,8 +2,11 @@
 import React from 'react';
 import { Bot, Clock, MessageCircle, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { useSiteConfig } from '@/hooks/useSiteConfig';
 
 const ZappynSection = () => {
+  const config = useSiteConfig();
+  
   return (
     <section id="zappyn" className="py-16 md:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-[#292826]"></div>
@@ -27,7 +30,7 @@ const ZappynSection = () => {
             <div className="relative">
               <div className="bg-[#292826] rounded-xl p-4 border-2 border-[#ffbd2f]/30">
                 <img
-                  src="/lovable-uploads/c774c106-fa85-4635-9fc0-cc53adae1aeb.png"
+                  src={config.images.zappyn}
                   alt="Assistente de IA Zappyn"
                   className="w-72 h-72 object-contain"
                 />
@@ -72,9 +75,11 @@ const ZappynSection = () => {
               </div>
             </div>
             
-            <Button className="bg-[#ffbd2f] hover:bg-[#ffbd2f]/90 text-black group">
-              Converse com Zappyn agora
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+            <Button className="bg-[#ffbd2f] hover:bg-[#ffbd2f]/90 text-black group" asChild>
+              <a href={config.buttons.talkToZappyn}>
+                Converse com Zappyn agora
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+              </a>
             </Button>
           </div>
         </div>

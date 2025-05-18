@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { useSiteConfig } from '@/hooks/useSiteConfig';
 
 const HeroSection = () => {
+  const config = useSiteConfig();
+  
   return (
     <section className="pt-28 pb-16 md:pt-36 md:pb-24 bg-black">
       <div className="container mx-auto px-4">
@@ -15,11 +18,15 @@ const HeroSection = () => {
               Automatize o atendimento, qualifique leads e aumente suas conversões com nossa plataforma de marketing conversacional.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-[#FFBD2F] hover:bg-[#FFBD2F]/90 text-black text-lg py-6 px-8">
-                Agendar uma demonstração
+              <Button className="bg-[#FFBD2F] hover:bg-[#FFBD2F]/90 text-black text-lg py-6 px-8" asChild>
+                <a href={config.buttons.scheduleDemo}>
+                  Agendar uma demonstração
+                </a>
               </Button>
-              <Button variant="outline" className="border-[#FFBD2F] text-[#FFBD2F] hover:bg-[#FFBD2F]/10 text-lg py-6 px-8">
-                Ver planos
+              <Button variant="outline" className="border-[#FFBD2F] text-[#FFBD2F] hover:bg-[#FFBD2F]/10 text-lg py-6 px-8" asChild>
+                <a href={config.buttons.seePlans}>
+                  Ver planos
+                </a>
               </Button>
             </div>
             <div className="mt-8 flex items-center gap-4">
@@ -37,7 +44,7 @@ const HeroSection = () => {
             <div className="rounded-xl overflow-hidden shadow-2xl border border-[#292826]/50">
               <div className="aspect-video bg-[#292826] w-full">
                 <img
-                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+                  src={config.images.hero}
                   alt="Plataforma em ação"
                   className="w-full h-full object-cover opacity-80"
                 />

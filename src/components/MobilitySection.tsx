@@ -2,8 +2,11 @@
 import React from 'react';
 import { Smartphone, Tablet, Monitor } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { useSiteConfig } from '@/hooks/useSiteConfig';
 
 const MobilitySection = () => {
+  const config = useSiteConfig();
+  
   return (
     <section id="mobilidade" className="py-16 md:py-24 bg-black">
       <div className="container mx-auto px-4">
@@ -41,8 +44,10 @@ const MobilitySection = () => {
               </div>
             </div>
             
-            <Button className="bg-[#ffbd2f] hover:bg-[#ffbd2f]/90 text-black">
-              Experimente Agora
+            <Button className="bg-[#ffbd2f] hover:bg-[#ffbd2f]/90 text-black" asChild>
+              <a href={config.buttons.tryNow}>
+                Experimente Agora
+              </a>
             </Button>
           </div>
           
@@ -52,7 +57,7 @@ const MobilitySection = () => {
               <div className="absolute transform -translate-x-8 scale-95 -rotate-6 shadow-xl rounded-3xl overflow-hidden w-72 h-[34rem] border-8 border-[#292826]">
                 <div className="w-full h-full bg-[#292826]">
                   <img 
-                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
+                    src={config.images.mobility.phone1}
                     alt="ZappyBot no celular" 
                     className="w-full h-full object-cover opacity-80"
                   />
@@ -63,7 +68,7 @@ const MobilitySection = () => {
               <div className="relative z-10 shadow-xl rounded-3xl overflow-hidden w-72 h-[34rem] border-8 border-[#292826]">
                 <div className="w-full h-full bg-[#292826]">
                   <img 
-                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" 
+                    src={config.images.mobility.phone2}
                     alt="ZappyBot no celular" 
                     className="w-full h-full object-cover opacity-80"
                   />

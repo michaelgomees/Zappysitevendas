@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { useSiteConfig } from '@/hooks/useSiteConfig';
 
 const VideoTabsSection = () => {
+  const config = useSiteConfig();
+  
   return (
     <section className="py-16 md:py-24 bg-black" id="videos">
       <div className="container mx-auto px-4">
@@ -24,7 +27,7 @@ const VideoTabsSection = () => {
               <div className="aspect-video w-full bg-[#292826] rounded-lg overflow-hidden shadow-lg border border-[#292826]/80">
                 <iframe 
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  src={config.videos.flowbuilderDemo}
                   title="Flowbuilder Demonstration"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -34,9 +37,20 @@ const VideoTabsSection = () => {
             </TabsContent>
             <TabsContent value="tab2" className="mt-4">
               <div className="aspect-video w-full bg-[#292826] rounded-lg overflow-hidden shadow-lg border border-[#292826]/80">
-                <div className="w-full h-full flex items-center justify-center">
-                  <p className="text-gray-300">Vídeo será adicionado em breve.</p>
-                </div>
+                {config.videos.additional ? (
+                  <iframe 
+                    className="w-full h-full"
+                    src={config.videos.additional}
+                    title="Vídeo Adicional"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <p className="text-gray-300">Vídeo será adicionado em breve.</p>
+                  </div>
+                )}
               </div>
             </TabsContent>
           </Tabs>

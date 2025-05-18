@@ -3,62 +3,68 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle } from 'lucide-react';
-
-const plans = [
-  {
-    id: 'starter',
-    name: 'Starter',
-    description: 'Perfeito para pequenas empresas que estão começando.',
-    price: 'R$ 197',
-    period: '/mês',
-    features: [
-      'Até 3 canais de atendimento',
-      '1.000 conversas mensais',
-      'Chatbot básico',
-      'Integrações limitadas',
-      'Suporte por email'
-    ],
-    cta: 'Começar agora',
-    popular: false
-  },
-  {
-    id: 'professional',
-    name: 'Professional',
-    description: 'Ideal para empresas em crescimento que precisam escalar.',
-    price: 'R$ 497',
-    period: '/mês',
-    features: [
-      'Até 5 canais de atendimento',
-      '5.000 conversas mensais',
-      'Chatbot avançado com IA',
-      'Integrações com CRM',
-      'Análises detalhadas',
-      'Suporte prioritário'
-    ],
-    cta: 'Começar agora',
-    popular: true
-  },
-  {
-    id: 'enterprise',
-    name: 'Enterprise',
-    description: 'Para grandes empresas com demandas complexas.',
-    price: 'Personalizado',
-    period: '',
-    features: [
-      'Canais ilimitados',
-      'Conversas ilimitadas',
-      'IA avançada personalizada',
-      'Integrações customizadas',
-      'API completa',
-      'Gerente de conta dedicado',
-      'SLA garantido'
-    ],
-    cta: 'Falar com consultor',
-    popular: false
-  }
-];
+import { useSiteConfig } from '@/hooks/useSiteConfig';
 
 const PricingSection = () => {
+  const config = useSiteConfig();
+  
+  const plans = [
+    {
+      id: 'starter',
+      name: 'Starter',
+      description: 'Perfeito para pequenas empresas que estão começando.',
+      price: 'R$ 197',
+      period: '/mês',
+      features: [
+        'Até 3 canais de atendimento',
+        '1.000 conversas mensais',
+        'Chatbot básico',
+        'Integrações limitadas',
+        'Suporte por email'
+      ],
+      cta: 'Começar agora',
+      popular: false,
+      link: config.buttons.starterPlan
+    },
+    {
+      id: 'professional',
+      name: 'Professional',
+      description: 'Ideal para empresas em crescimento que precisam escalar.',
+      price: 'R$ 497',
+      period: '/mês',
+      features: [
+        'Até 5 canais de atendimento',
+        '5.000 conversas mensais',
+        'Chatbot avançado com IA',
+        'Integrações com CRM',
+        'Análises detalhadas',
+        'Suporte prioritário'
+      ],
+      cta: 'Começar agora',
+      popular: true,
+      link: config.buttons.professionalPlan
+    },
+    {
+      id: 'enterprise',
+      name: 'Enterprise',
+      description: 'Para grandes empresas com demandas complexas.',
+      price: 'Personalizado',
+      period: '',
+      features: [
+        'Canais ilimitados',
+        'Conversas ilimitadas',
+        'IA avançada personalizada',
+        'Integrações customizadas',
+        'API completa',
+        'Gerente de conta dedicado',
+        'SLA garantido'
+      ],
+      cta: 'Falar com consultor',
+      popular: false,
+      link: config.buttons.enterprisePlan
+    }
+  ];
+
   return (
     <section id="precos" className="py-16 md:py-24 bg-black">
       <div className="container mx-auto px-4">
@@ -103,8 +109,11 @@ const PricingSection = () => {
               <CardFooter>
                 <Button 
                   className={`w-full ${plan.popular ? 'bg-[#FFBD2F] hover:bg-[#FFBD2F]/90 text-black' : 'bg-[#292826] hover:bg-[#292826]/80 text-white border border-[#FFBD2F]/30'}`}
+                  asChild
                 >
-                  {plan.cta}
+                  <a href={plan.link}>
+                    {plan.cta}
+                  </a>
                 </Button>
               </CardFooter>
             </Card>

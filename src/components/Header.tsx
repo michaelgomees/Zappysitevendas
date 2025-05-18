@@ -2,8 +2,10 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { MenuIcon, X } from 'lucide-react';
+import { useSiteConfig } from '@/hooks/useSiteConfig';
 
 const Header = () => {
+  const config = useSiteConfig();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   const toggleMobileMenu = () => {
@@ -17,7 +19,7 @@ const Header = () => {
           {/* Logo - facilmente substituível */}
           <a href="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/f0b58f0b-0691-40da-9ede-94eb8346ef01.png" 
+              src={config.images.logo}
               alt="Logo" 
               className="h-14"
             />
@@ -33,8 +35,10 @@ const Header = () => {
           <a href="#configuracao" className="text-white hover:text-[#ffbd2f] font-medium transition-colors">Configuração</a>
           <a href="#precos" className="text-white hover:text-[#ffbd2f] font-medium transition-colors">Preços</a>
           <a href="#faq" className="text-white hover:text-[#ffbd2f] font-medium transition-colors">FAQ</a>
-          <Button className="bg-[#ffbd2f] hover:bg-[#ffbd2f]/90 text-black">
-            Começar agora
+          <Button className="bg-[#ffbd2f] hover:bg-[#ffbd2f]/90 text-black" asChild>
+            <a href={config.buttons.startNow}>
+              Começar agora
+            </a>
           </Button>
         </nav>
 
@@ -57,8 +61,10 @@ const Header = () => {
             <a href="#configuracao" className="text-white hover:text-[#ffbd2f] font-medium py-2 transition-colors">Configuração</a>
             <a href="#precos" className="text-white hover:text-[#ffbd2f] font-medium py-2 transition-colors">Preços</a>
             <a href="#faq" className="text-white hover:text-[#ffbd2f] font-medium py-2 transition-colors">FAQ</a>
-            <Button className="bg-[#ffbd2f] hover:bg-[#ffbd2f]/90 text-black w-full">
-              Começar agora
+            <Button className="bg-[#ffbd2f] hover:bg-[#ffbd2f]/90 text-black w-full" asChild>
+              <a href={config.buttons.startNow}>
+                Começar agora
+              </a>
             </Button>
           </div>
         </div>

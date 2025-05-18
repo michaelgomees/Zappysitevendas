@@ -1,8 +1,10 @@
 
 import React from 'react';
-import { Facebook, Instagram, MessageCircle, Mail, Headphones } from 'lucide-react';
+import { Facebook, Instagram, MessageCircle, Mail, Phone } from 'lucide-react';
+import { useSiteConfig } from '@/hooks/useSiteConfig';
 
 const Footer = () => {
+  const config = useSiteConfig();
   const currentYear = new Date().getFullYear();
   
   return (
@@ -13,7 +15,7 @@ const Footer = () => {
             {/* Logo */}
             <div className="flex items-center justify-center md:justify-start mb-4">
               <img 
-                src="/lovable-uploads/f0b58f0b-0691-40da-9ede-94eb8346ef01.png" 
+                src={config.images.logo}
                 alt="Logo" 
                 className="h-20 object-contain"
               />
@@ -27,19 +29,19 @@ const Footer = () => {
           <div className="mb-8 md:mb-0">
             <h3 className="text-lg font-bold mb-4 text-[#ffbd2f] text-center md:text-left">Conecte-se conosco</h3>
             <div className="flex space-x-4 justify-center md:justify-start">
-              <a href="#" className="bg-[#292826] p-3 rounded-full hover:bg-[#ffbd2f] hover:text-black transition-colors">
+              <a href={config.socialMedia.facebook} className="bg-[#292826] p-3 rounded-full hover:bg-[#ffbd2f] hover:text-black transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="bg-[#292826] p-3 rounded-full hover:bg-[#ffbd2f] hover:text-black transition-colors">
+              <a href={config.socialMedia.instagram} className="bg-[#292826] p-3 rounded-full hover:bg-[#ffbd2f] hover:text-black transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="bg-[#292826] p-3 rounded-full hover:bg-[#ffbd2f] hover:text-black transition-colors">
+              <a href={config.socialMedia.chat} className="bg-[#292826] p-3 rounded-full hover:bg-[#ffbd2f] hover:text-black transition-colors">
                 <MessageCircle size={20} />
               </a>
-              <a href="#" className="bg-[#292826] p-3 rounded-full hover:bg-[#ffbd2f] hover:text-black transition-colors">
-                <Headphones size={20} />
+              <a href={config.socialMedia.phone} className="bg-[#292826] p-3 rounded-full hover:bg-[#ffbd2f] hover:text-black transition-colors">
+                <Phone size={20} />
               </a>
-              <a href="#" className="bg-[#292826] p-3 rounded-full hover:bg-[#ffbd2f] hover:text-black transition-colors">
+              <a href={config.socialMedia.email} className="bg-[#292826] p-3 rounded-full hover:bg-[#ffbd2f] hover:text-black transition-colors">
                 <Mail size={20} />
               </a>
             </div>

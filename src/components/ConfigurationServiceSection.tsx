@@ -2,8 +2,11 @@
 import React from 'react';
 import { Settings, CheckCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { useSiteConfig } from '@/hooks/useSiteConfig';
 
 const ConfigurationServiceSection = () => {
+  const config = useSiteConfig();
+  
   return (
     <section id="configuracao" className="py-16 md:py-24 bg-black">
       <div className="container mx-auto px-4">
@@ -44,8 +47,10 @@ const ConfigurationServiceSection = () => {
                 </li>
               </ul>
               
-              <Button className="bg-[#FFBD2F] hover:bg-[#FFBD2F]/90 text-black">
-                Solicitar Configuração
+              <Button className="bg-[#FFBD2F] hover:bg-[#FFBD2F]/90 text-black" asChild>
+                <a href={config.buttons.requestSetup}>
+                  Solicitar Configuração
+                </a>
               </Button>
             </div>
           </div>
