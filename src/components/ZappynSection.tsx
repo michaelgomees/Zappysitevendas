@@ -27,16 +27,12 @@ const ZappynSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="flex justify-center">
-            <div className="relative">
-              <div className="bg-[#292826] rounded-xl p-4 border-2 border-[#ffbd2f]/30">
-                <img
-                  src={config.images.zappyn}
-                  alt="Assistente de IA Zappyn"
-                  className="w-72 h-72 object-contain"
-                />
-              </div>
-              {/* Ícones removidos conforme solicitado */}
-            </div>
+            {/* Removido o box e containers para permitir uma imagem maior */}
+            <img
+              src={config.images.zappyn}
+              alt="Assistente de IA Zappyn"
+              className="max-w-full max-h-[500px] object-contain"
+            />
           </div>
           
           <div>
