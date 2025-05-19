@@ -62,9 +62,9 @@ export interface SiteConfig {
 // Você pode modificar estes valores diretamente neste arquivo
 const siteConfig: SiteConfig = {
   images: {
-    logo: "/lovable-uploads/f0b58f0b-0691-40da-9ede-94eb8346ef01.png",
+    logo: "/lovable-uploads/3a2f0fee-bae1-4a5f-835e-a247d0f7021d.png",
     hero: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    zappyn: "/lovable-uploads/c774c106-fa85-4635-9fc0-cc53adae1aeb.png",
+    zappyn: "/lovable-uploads/29e9dc56-4093-4479-912b-157682756311.png",
     features: {
       chatbots: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4",
       multicanal: "https://images.unsplash.com/photo-1551434678-e076c223a692",

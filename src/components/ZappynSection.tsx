@@ -27,17 +27,17 @@ const ZappynSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="flex justify-center">
-            {/* Removido o box e containers para permitir uma imagem maior */}
+            {/* Imagem grande do ZappyBot sem restrições de box */}
             <img
               src={config.images.zappyn}
-              alt="Assistente de IA Zappyn"
-              className="max-w-full max-h-[500px] object-contain"
+              alt="ZappyBot - Assistente de IA"
+              className="w-auto h-auto max-h-[600px] object-contain"
             />
           </div>
           
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#ffbd2f]">
-              Conheça o Zappyn
+              Conheça o ZappyBot
             </h2>
             
             <p className="text-lg text-white mb-6">
@@ -58,7 +58,7 @@ const ZappynSection = () => {
                 <Clock className="text-[#ffbd2f] mr-4 mt-1" size={24} />
                 <div>
                   <h3 className="font-bold text-[#ffbd2f] mb-1">Disponível 24/7</h3>
-                  <p className="text-gray-300">Nunca mais perca um cliente por falta de atendimento. O Zappyn está sempre online.</p>
+                  <p className="text-gray-300">Nunca mais perca um cliente por falta de atendimento. O ZappyBot está sempre online.</p>
                 </div>
               </div>
               
@@ -73,7 +73,7 @@ const ZappynSection = () => {
             
             <Button className="bg-[#ffbd2f] hover:bg-[#ffbd2f]/90 text-black group" asChild>
               <a href={config.buttons.talkToZappyn}>
-                Converse com Zappyn agora
+                Converse com ZappyBot agora
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
               </a>
             </Button>
