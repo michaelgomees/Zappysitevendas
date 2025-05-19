@@ -46,6 +46,7 @@ export interface SiteConfig {
     starterPlan: string;
     professionalPlan: string;
     enterprisePlan: string;
+    extras: string;
   };
   
   // Links de redes sociais
@@ -102,7 +103,8 @@ const siteConfig: SiteConfig = {
     // Pricing section
     starterPlan: "#",
     professionalPlan: "#",
-    enterprisePlan: "#"
+    enterprisePlan: "#",
+    extras: "#"
   },
   
   socialMedia: {
