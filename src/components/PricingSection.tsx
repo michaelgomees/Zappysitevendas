@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, XCircle, Plus, Tag, MessageCircle } from 'lucide-react';
+import { CheckCircle, XCircle, Tag, MessageCircle } from 'lucide-react';
 import { useSiteConfig } from '@/hooks/useSiteConfig';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
@@ -30,7 +30,8 @@ const PricingSection = () => {
       ],
       cta: 'Começar agora',
       popular: false,
-      color: 'bg-green-500',
+      color: 'bg-orange-500',
+      borderColor: 'border-orange-500',
       link: config.buttons.starterPlan
     },
     {
@@ -53,7 +54,8 @@ const PricingSection = () => {
       ],
       cta: 'Começar agora',
       popular: true,
-      color: 'bg-blue-500',
+      color: 'bg-green-500',
+      borderColor: 'border-green-500',
       link: config.buttons.professionalPlan
     },
     {
@@ -78,6 +80,7 @@ const PricingSection = () => {
       cta: 'Falar com consultor',
       popular: false,
       color: 'bg-purple-500',
+      borderColor: 'border-purple-500',
       link: config.buttons.enterprisePlan
     }
   ];
@@ -118,7 +121,7 @@ const PricingSection = () => {
                   Mais popular
                 </div>
               )}
-              <div className={`absolute top-0 left-0 bottom-0 ${plan.id === 'essencial' ? 'bg-green-500' : plan.id === 'professional' ? 'bg-blue-500' : 'bg-purple-500'} w-1 h-full`}></div>
+              <div className={`absolute top-0 left-0 bottom-0 ${plan.color} w-1 h-full`}></div>
               <CardHeader className={plan.popular ? 'bg-[#FFBD2F]/5' : ''}>
                 <CardTitle className="text-2xl font-bold text-white">{plan.name}</CardTitle>
                 <CardDescription className="text-gray-300">{plan.description}</CardDescription>
@@ -164,11 +167,11 @@ const PricingSection = () => {
         {/* Extras Section */}
         <div className="mt-16">
           <div className="text-center mb-10">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#FFBD2F]">
-              <span className="inline-flex items-center gap-2">
-                <Plus className="text-[#FFBD2F]" size={24} strokeWidth={3} />
-                Extras
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#FFBD2F] flex items-center justify-center gap-2">
+              <span className="bg-[#292826] rounded-full p-1 border border-[#FFBD2F]/30">
+                <Tag className="text-[#FFBD2F]" size={26} />
               </span>
+              Extras
             </h3>
             <p className="text-lg text-gray-300">
               Adicione mais recursos ao seu plano conforme sua necessidade
