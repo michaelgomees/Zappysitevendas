@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, XCircle } from 'lucide-react';
+import { CheckCircle, XCircle, Plus, Tag, MessageCircle } from 'lucide-react';
 import { useSiteConfig } from '@/hooks/useSiteConfig';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
@@ -86,12 +86,12 @@ const PricingSection = () => {
     {
       name: 'Conexão WhatsApp adicional',
       price: 'R$ 39,99/mês',
-      icon: '💬'
+      icon: <MessageCircle className="text-[#FFBD2F]" size={28} />
     },
     {
       name: 'Fila adicional (extra)',
       price: 'R$ 14,90/mês',
-      icon: '🎫'
+      icon: <Tag className="text-[#FFBD2F]" size={28} />
     }
   ];
 
@@ -111,14 +111,14 @@ const PricingSection = () => {
           {plans.map((plan) => (
             <Card 
               key={plan.id} 
-              className={`bg-[#292826] border ${plan.popular ? 'border-[#FFBD2F] ring-2 ring-[#FFBD2F]/20' : 'border-[#292826]/50'} shadow-lg relative hover-glow`}
+              className={`bg-[#292826] border ${plan.popular ? 'border-[#FFBD2F] ring-2 ring-[#FFBD2F]/20' : 'border-[#292826]/50'} shadow-lg relative hover-glow overflow-hidden`}
             >
               {plan.popular && (
                 <div className="absolute top-0 right-0 bg-[#FFBD2F] text-black text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
                   Mais popular
                 </div>
               )}
-              <div className={`absolute top-0 left-0 ${plan.id === 'essencial' ? 'bg-green-500' : plan.id === 'professional' ? 'bg-blue-500' : 'bg-purple-500'} w-2 h-full`}></div>
+              <div className={`absolute top-0 left-0 bottom-0 ${plan.id === 'essencial' ? 'bg-green-500' : plan.id === 'professional' ? 'bg-blue-500' : 'bg-purple-500'} w-1 h-full`}></div>
               <CardHeader className={plan.popular ? 'bg-[#FFBD2F]/5' : ''}>
                 <CardTitle className="text-2xl font-bold text-white">{plan.name}</CardTitle>
                 <CardDescription className="text-gray-300">{plan.description}</CardDescription>
@@ -165,7 +165,10 @@ const PricingSection = () => {
         <div className="mt-16">
           <div className="text-center mb-10">
             <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#FFBD2F]">
-              ➕ Extras
+              <span className="inline-flex items-center gap-2">
+                <Plus className="text-[#FFBD2F]" size={24} strokeWidth={3} />
+                Extras
+              </span>
             </h3>
             <p className="text-lg text-gray-300">
               Adicione mais recursos ao seu plano conforme sua necessidade
@@ -187,7 +190,7 @@ const PricingSection = () => {
                   <TableBody>
                     {extras.map((extra, index) => (
                       <TableRow key={index} className="border-b border-gray-700">
-                        <TableCell className="text-2xl">{extra.icon}</TableCell>
+                        <TableCell>{extra.icon}</TableCell>
                         <TableCell className="text-white font-medium">{extra.name}</TableCell>
                         <TableCell className="text-right text-[#FFBD2F] font-bold">{extra.price}</TableCell>
                         <TableCell>

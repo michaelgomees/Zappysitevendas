@@ -59,7 +59,7 @@ const MobilitySection = () => {
                   <img 
                     src={config.images.mobility.phone1}
                     alt="ZappyBot no celular" 
-                    className="w-full h-full object-cover opacity-80"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </div>
@@ -70,7 +70,7 @@ const MobilitySection = () => {
                   <img 
                     src={config.images.mobility.phone2}
                     alt="ZappyBot no celular" 
-                    className="w-full h-full object-cover opacity-80"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </div>

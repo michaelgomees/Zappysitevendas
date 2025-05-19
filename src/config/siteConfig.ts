@@ -73,8 +73,8 @@ const siteConfig: SiteConfig = {
       crm: "https://images.unsplash.com/photo-1522071820081-009f0129c71c"
     },
     mobility: {
-      phone1: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      phone2: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+      phone1: "/lovable-uploads/660f46c7-e32c-4aed-aa8c-83e2b433a3e9.png",
+      phone2: "/lovable-uploads/660f46c7-e32c-4aed-aa8c-83e2b433a3e9.png"
     }
   },
   
@@ -108,11 +108,11 @@ const siteConfig: SiteConfig = {
   },
   
   socialMedia: {
-    facebook: "https://facebook.com",
-    instagram: "https://instagram.com",
+    facebook: "https://facebook.com/zappybot",
+    instagram: "https://instagram.com/zappybot",
     chat: "https://api.whatsapp.com/send?phone=5500000000000",
     phone: "tel:+5500000000000",
-    email: "mailto:contato@exemplo.com"
+    email: "mailto:contato@zappybot.com"
   }
 };
 
