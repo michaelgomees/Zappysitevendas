@@ -7,28 +7,66 @@ import { localViteConfig } from "./src/vite.local";
 import { getBuildConfig } from "./src/config/buildConfig";
 import fs from 'fs';
 
+// Function to check and create package.json in critical paths
+function ensurePackageJson() {
+  // Check multiple paths including /dev-server which npm looks for
+  const possiblePaths = [
+    path.resolve(__dirname, 'package.json'),
+    '/dev-server/package.json',
+    path.resolve(process.cwd(), 'package.json')
+  ];
+  
+  // For each path, check if package.json exists or try to create it
+  for (const packagePath of possiblePaths) {
+    try {
+      if (!fs.existsSync(packagePath)) {
+        // Create directory if it doesn't exist
+        const dir = path.dirname(packagePath);
+        if (!fs.existsSync(dir)) {
+          fs.mkdirSync(dir, { recursive: true });
+        }
+        
+        // Create minimal package.json
+        const minimalPackageJson = {
+          name: "zappybot-website",
+          version: "1.0.0",
+          private: true,
+          type: "module",
+          dependencies: {
+            "react": "^18.3.1",
+            "react-dom": "^18.3.1"
+          }
+        };
+        
+        fs.writeFileSync(packagePath, JSON.stringify(minimalPackageJson, null, 2));
+        console.log(`Created package.json at ${packagePath}`);
+      }
+    } catch (error) {
+      console.warn(`Failed to create package.json at ${packagePath}:`, error);
+    }
+  }
+}
+
+// Try to ensure package.json exists in all needed locations
+if (!process.env.SKIP_PACKAGE_JSON_CHECK) {
+  try {
+    ensurePackageJson();
+  } catch (error) {
+    console.warn('Error in package.json creation:', error);
+  }
+}
+
 // Try to load package.json if it exists or create a minimal one if needed
 let packageJson: any = null;
 try {
   const packageJsonPath = path.resolve(__dirname, 'package.json');
   
-  // If package.json doesn't exist, try to create temporary one using bootstrap
-  if (!fs.existsSync(packageJsonPath) && !process.env.SKIP_PACKAGE_JSON_CHECK) {
-    console.log('No package.json found, running bootstrap to create one...');
-    try {
-      // Execute bootstrap synchronously
-      require('./src/bootstrap');
-      
-      // Try to read the newly created file
-      if (fs.existsSync(packageJsonPath)) {
-        packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
-      }
-    } catch (bootstrapError) {
-      console.warn('Failed to bootstrap package.json:', bootstrapError);
-    }
-  } else if (fs.existsSync(packageJsonPath)) {
+  if (fs.existsSync(packageJsonPath)) {
     // Normal case - package.json exists
     packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
+  } else if (fs.existsSync('/dev-server/package.json')) {
+    // Try the /dev-server path that npm is looking for
+    packageJson = JSON.parse(fs.readFileSync('/dev-server/package.json', 'utf-8'));
   }
 } catch (error) {
   console.warn('Unable to load package.json, using fallback configuration:', error);

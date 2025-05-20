@@ -10,6 +10,11 @@ const fs = require('fs');
 
 console.log('Starting ZappyBot website in development mode...');
 
+// Import and run the bootstrap setup first
+const bootstrap = require('./src/bootstrap');
+console.log('Running bootstrap to ensure package.json exists...');
+bootstrap.setupEnvironment();
+
 // Function to ensure directory exists
 function ensureDirectoryExists(dirPath) {
   if (!fs.existsSync(dirPath)) {
@@ -25,76 +30,53 @@ function ensureDirectoryExists(dirPath) {
 // Ensure node_modules directory exists (empty is fine for our fallback)
 ensureDirectoryExists(path.join(__dirname, 'node_modules'));
 
-// Check if package.json exists, if not create a temporary one
-const packageJsonPath = path.join(__dirname, 'package.json');
-if (!fs.existsSync(packageJsonPath)) {
-  console.log('No package.json found, will use fallback configuration');
-  
-  try {
-    // Create a comprehensive package.json with minimal information
-    const tempPackageJson = {
-      name: "zappybot-website",
-      version: "1.0.0",
-      private: true,
-      type: "module",
-      dependencies: {
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "react-router-dom": "^6.26.2",
-        "@tanstack/react-query": "^5.56.2",
-        "lucide-react": "^0.462.0",
-        "clsx": "^2.1.1",
-        "tailwind-merge": "^2.5.2",
-        "class-variance-authority": "^0.7.1",
-        "zod": "^3.23.8",
-        "recharts": "^2.12.7",
-        "sonner": "^1.5.0"
-      },
-      devDependencies: {
-        "typescript": "^5.0.0",
-        "vite": "^5.0.0",
-        "@vitejs/plugin-react-swc": "^3.5.0",
-        "tailwindcss": "^3.4.1",
-        "postcss": "^8.4.35",
-        "autoprefixer": "^10.4.18"
-      },
-      scripts: {
-        "start": "vite",
-        "build": "vite build",
-        "preview": "vite preview"
-      }
-    };
-    
-    // Write temporary package.json
-    fs.writeFileSync(packageJsonPath, JSON.stringify(tempPackageJson, null, 2));
-    console.log('Created temporary package.json for this session');
-    
-    // Also create a minimal package-lock.json
-    const lockFilePath = path.join(__dirname, 'package-lock.json');
-    if (!fs.existsSync(lockFilePath)) {
-      fs.writeFileSync(lockFilePath, JSON.stringify({
-        name: "zappybot-website",
-        version: "1.0.0",
-        lockfileVersion: 3,
-        requires: true,
-        packages: {}
-      }, null, 2));
-      console.log('Created minimal package-lock.json');
-    }
-  } catch (error) {
-    console.warn('Could not create temporary package.json:', error);
-    console.log('Proceeding with fallback configuration only');
-  }
-}
+// Also check for the /dev-server directory which npm seems to be looking for
+ensureDirectoryExists('/dev-server');
 
 // Create a script to directly run vite using our bootstrap
 const bootstrapScript = `
+// Run bootstrap first to ensure package.json exists
 require('./src/bootstrap.js');
-require('vite');
+
+// Now try to load and run vite
+try {
+  require('vite');
+} catch (error) {
+  console.error('Error loading Vite:', error);
+  console.log('\\n===== TROUBLESHOOTING =====');
+  console.log('1. Try running: SKIP_PACKAGE_JSON_CHECK=true npx vite');
+  console.log('2. Or try: node src/bootstrap.js && npx vite');
+  console.log('3. Ensure package.json exists in one of the expected paths');
+  console.log('===========================\\n');
+  process.exit(1);
+}
 `;
 
 const tempScriptPath = path.join(__dirname, '_temp_start_vite.js');
 fs.writeFileSync(tempScriptPath, bootstrapScript);
+
+// Create a DirectVite execution script as an alternative
+const directVitePath = path.join(__dirname, '_direct_vite.js');
+fs.writeFileSync(directVitePath, `
+// Direct execution of Vite bypassing npm
+const { createServer } = require('vite');
+
+async function startVite() {
+  const server = await createServer({
+    configFile: './vite.config.ts',
+    server: {
+      host: "::",
+      port: 8080,
+    }
+  });
+  await server.listen();
+}
+
+startVite().catch(error => {
+  console.error('Failed to start Vite server:', error);
+  process.exit(1);
+});
+`);
 
 // Run our bootstrapped vite script
 console.log('Launching Vite with bootstrap preparation...');
@@ -111,12 +93,29 @@ const viteProcess = spawn('node', [tempScriptPath], {
 
 viteProcess.on('error', (error) => {
   console.error('Failed to start development server:', error);
+  console.log('\nTrying alternative direct Vite execution...');
+  
+  const directViteProcess = spawn('node', [directVitePath], {
+    stdio: 'inherit',
+    shell: true,
+    env: {
+      ...process.env,
+      NODE_ENV: 'development',
+      SKIP_PACKAGE_JSON_CHECK: 'true',
+      FORCE_FALLBACK_CONFIG: 'true'
+    }
+  });
+  
+  directViteProcess.on('error', (directError) => {
+    console.error('Alternative Vite execution also failed:', directError);
+  });
 });
 
 viteProcess.on('exit', (code) => {
-  // Clean up temp file
+  // Clean up temp files
   try {
     fs.unlinkSync(tempScriptPath);
+    fs.unlinkSync(directVitePath);
   } catch (e) {
     // Ignore cleanup errors
   }
@@ -126,6 +125,7 @@ viteProcess.on('exit', (code) => {
     console.log('If you continue to have issues:');
     console.log('1. Try running: SKIP_PACKAGE_JSON_CHECK=true npx vite');
     console.log('2. Or try: node src/bootstrap.js && npx vite');
+    console.log('3. Check if /dev-server directory exists and has write permissions');
     console.log('===========================\n');
   }
   
