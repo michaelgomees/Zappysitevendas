@@ -7,25 +7,44 @@ import { localViteConfig } from "./src/vite.local";
 import { getBuildConfig } from "./src/config/buildConfig";
 import fs from 'fs';
 
-// Try to load package.json if it exists
+// Try to load package.json if it exists or create a minimal one if needed
 let packageJson: any = null;
 try {
   const packageJsonPath = path.resolve(__dirname, 'package.json');
-  if (fs.existsSync(packageJsonPath)) {
+  
+  // If package.json doesn't exist, try to create temporary one using bootstrap
+  if (!fs.existsSync(packageJsonPath) && !process.env.SKIP_PACKAGE_JSON_CHECK) {
+    console.log('No package.json found, running bootstrap to create one...');
+    try {
+      // Execute bootstrap synchronously
+      require('./src/bootstrap');
+      
+      // Try to read the newly created file
+      if (fs.existsSync(packageJsonPath)) {
+        packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
+      }
+    } catch (bootstrapError) {
+      console.warn('Failed to bootstrap package.json:', bootstrapError);
+    }
+  } else if (fs.existsSync(packageJsonPath)) {
+    // Normal case - package.json exists
     packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
   }
 } catch (error) {
-  console.warn('Unable to load package.json, using fallback configuration');
+  console.warn('Unable to load package.json, using fallback configuration:', error);
 }
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  // Use the fallback build config when package.json isn't available
+  // Always use the fallback build config as base
   const buildConfig = getBuildConfig();
   
   // Determine what configuration to use (package.json or fallback)
   const appName = packageJson?.name || buildConfig.name;
   const appVersion = packageJson?.version || buildConfig.version;
+
+  // Use console logs to debug the configuration
+  console.log(`Building ${appName} v${appVersion} using ${packageJson ? 'package.json' : 'fallback config'}`);
 
   return {
     // Use local config for server settings

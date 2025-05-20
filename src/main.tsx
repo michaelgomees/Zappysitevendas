@@ -3,12 +3,23 @@ import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import { getBuildConfig } from './config/buildConfig'
+import { generateTemporaryPackageJson } from './config/packageGenerator'
 
 // Make build config available globally for build tools that might need it
 if (typeof window !== 'undefined') {
   // @ts-ignore
   window.__BUILD_CONFIG = getBuildConfig();
   console.log('App starting with build config:', getBuildConfig().name, 'v' + getBuildConfig().version);
+  
+  // Try to ensure package.json exists during development
+  if (process.env.NODE_ENV === 'development') {
+    try {
+      // This will only execute in a Node.js environment, not in the browser
+      generateTemporaryPackageJson();
+    } catch (e) {
+      // Ignore errors in browser context
+    }
+  }
 }
 
 // Initialize environment (this could detect if we're missing crucial files)
