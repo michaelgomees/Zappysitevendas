@@ -2,7 +2,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { useSiteConfig } from '@/hooks/useSiteConfig';
-import CompanyLogos from './CompanyLogos';
 
 const HeroSection = () => {
   const config = useSiteConfig();
@@ -30,11 +29,15 @@ const HeroSection = () => {
                 </a>
               </Button>
             </div>
-            <div className="mt-8">
-              <p className="text-gray-300 mb-2">
+            <div className="mt-8 flex items-center gap-4">
+              <div className="flex -space-x-2">
+                {[1, 2, 3, 4].map((i) => (
+                  <div key={i} className="w-10 h-10 rounded-full bg-[#292826] border-2 border-black" />
+                ))}
+              </div>
+              <p className="text-gray-300">
                 <span className="font-bold text-[#FFBD2F]">+1.000</span> empresas já utilizam
               </p>
-              <CompanyLogos />
             </div>
           </div>
           <div className="md:w-1/2">
@@ -43,7 +46,7 @@ const HeroSection = () => {
                 <img
                   src={config.images.hero}
                   alt="Plataforma em ação"
-                  className="w-full h-full object-cover opacity-90"
+                  className="w-full h-full object-cover opacity-80"
                 />
               </div>
             </div>
