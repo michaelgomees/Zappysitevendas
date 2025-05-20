@@ -36,7 +36,7 @@ const HeroSection = () => {
                 ))}
               </div>
               <p className="text-gray-300">
-                <span className="font-bold text-[#FFBD2F]">+1.000</span> empresas já utilizam
+                <span className="font-bold text-[#FFBD2F]">{config.display.companyCount}</span> empresas já utilizam
               </p>
             </div>
           </div>

@@ -16,6 +16,17 @@ export interface SiteConfig {
       phone1: string;
       phone2: string;
     };
+    companyLogos: string[];
+    integrations: {
+      dialogflow: string;
+      n8n: string;
+      webhooks: string;
+      typebot: string;
+      make: string;
+      kwify: string;
+      eduzz: string;
+      asaas: string;
+    };
   };
   
   // Vídeos
@@ -57,6 +68,11 @@ export interface SiteConfig {
     phone: string;
     email: string;
   };
+
+  // Configurações de exibição
+  display: {
+    companyCount: string;
+  };
 }
 
 // Configuração padrão do site
@@ -75,6 +91,22 @@ const siteConfig: SiteConfig = {
     mobility: {
       phone1: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
       phone2: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+    },
+    companyLogos: [
+      "https://via.placeholder.com/100x50?text=Logo1",
+      "https://via.placeholder.com/100x50?text=Logo2",
+      "https://via.placeholder.com/100x50?text=Logo3",
+      "https://via.placeholder.com/100x50?text=Logo4"
+    ],
+    integrations: {
+      dialogflow: "https://via.placeholder.com/100x100?text=Dialogflow",
+      n8n: "https://via.placeholder.com/100x100?text=n8n",
+      webhooks: "https://via.placeholder.com/100x100?text=Webhooks",
+      typebot: "https://via.placeholder.com/100x100?text=Typebot",
+      make: "https://via.placeholder.com/100x100?text=Make",
+      kwify: "https://via.placeholder.com/100x100?text=Kwify",
+      eduzz: "https://via.placeholder.com/100x100?text=Eduzz",
+      asaas: "https://via.placeholder.com/100x100?text=Asaas"
     }
   },
   
@@ -113,6 +145,10 @@ const siteConfig: SiteConfig = {
     chat: "https://api.whatsapp.com/send?phone=5500000000000",
     phone: "tel:+5500000000000",
     email: "mailto:contato@exemplo.com"
+  },
+
+  display: {
+    companyCount: "+100"
   }
 };
 

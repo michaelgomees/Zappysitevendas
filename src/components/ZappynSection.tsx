@@ -8,7 +8,7 @@ const ZappynSection = () => {
   const config = useSiteConfig();
   
   return (
-    <section id="zappyn" className="py-16 md:py-24 relative overflow-hidden">
+    <section id="zappynho" className="py-16 md:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-[#292826]"></div>
       {/* Elementos decorativos de IA */}
       <div className="absolute inset-0 opacity-10">
@@ -37,7 +37,7 @@ const ZappynSection = () => {
           
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#ffbd2f]">
-              Conheça o ZappyBot
+              Conheça o Zappynho
             </h2>
             
             <p className="text-lg text-white mb-6">
@@ -58,7 +58,7 @@ const ZappynSection = () => {
                 <Clock className="text-[#ffbd2f] mr-4 mt-1" size={24} />
                 <div>
                   <h3 className="font-bold text-[#ffbd2f] mb-1">Disponível 24/7</h3>
-                  <p className="text-gray-300">Nunca mais perca um cliente por falta de atendimento. O ZappyBot está sempre online.</p>
+                  <p className="text-gray-300">Nunca mais perca um cliente por falta de atendimento. O Zappynho está sempre online.</p>
                 </div>
               </div>
               
@@ -73,7 +73,7 @@ const ZappynSection = () => {
             
             <Button className="bg-[#ffbd2f] hover:bg-[#ffbd2f]/90 text-black group" asChild>
               <a href={config.buttons.talkToZappyn}>
-                Converse com ZappyBot agora
+                Converse com Zappynho agora
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
               </a>
             </Button>

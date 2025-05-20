@@ -30,7 +30,7 @@ const PricingSection = () => {
       ],
       cta: 'Começar agora',
       popular: false,
-      color: 'bg-green-500',
+      color: 'bg-orange-500',
       link: config.buttons.starterPlan
     },
     {
@@ -53,7 +53,7 @@ const PricingSection = () => {
       ],
       cta: 'Começar agora',
       popular: true,
-      color: 'bg-blue-500',
+      color: 'bg-green-500',
       link: config.buttons.professionalPlan
     },
     {
@@ -86,7 +86,7 @@ const PricingSection = () => {
     {
       name: 'Conexão WhatsApp adicional',
       price: 'R$ 39,99/mês',
-      icon: '💬'
+      icon: '🔌'
     },
     {
       name: 'Fila adicional (extra)',
@@ -118,7 +118,7 @@ const PricingSection = () => {
                   Mais popular
                 </div>
               )}
-              <div className={`absolute top-0 left-0 ${plan.id === 'essencial' ? 'bg-green-500' : plan.id === 'professional' ? 'bg-blue-500' : 'bg-purple-500'} w-2 h-full`}></div>
+              <div className={`absolute top-0 left-0 ${plan.id === 'essencial' ? 'bg-orange-500' : plan.id === 'professional' ? 'bg-green-500' : 'bg-purple-500'} w-2 h-full`}></div>
               <CardHeader className={plan.popular ? 'bg-[#FFBD2F]/5' : ''}>
                 <CardTitle className="text-2xl font-bold text-white">{plan.name}</CardTitle>
                 <CardDescription className="text-gray-300">{plan.description}</CardDescription>
@@ -165,7 +165,7 @@ const PricingSection = () => {
         <div className="mt-16">
           <div className="text-center mb-10">
             <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#FFBD2F]">
-              ➕ Extras
+              <span className="inline-block p-1">🔌</span> Extras
             </h3>
             <p className="text-lg text-gray-300">
               Adicione mais recursos ao seu plano conforme sua necessidade

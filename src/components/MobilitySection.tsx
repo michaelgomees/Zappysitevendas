@@ -52,27 +52,11 @@ const MobilitySection = () => {
           </div>
           
           <div className="order-1 md:order-2 flex justify-center">
-            <div className="relative w-full max-w-md">
-              {/* Primeiro celular (levemente para trás) */}
-              <div className="absolute transform -translate-x-8 scale-95 -rotate-6 shadow-xl rounded-3xl overflow-hidden w-72 h-[34rem] border-8 border-[#292826]">
-                <div className="w-full h-full bg-[#292826]">
-                  <img 
-                    src={config.images.mobility.phone1}
-                    alt="ZappyBot no celular" 
-                    className="w-full h-full object-cover opacity-80"
-                  />
-                </div>
-              </div>
-              
-              {/* Segundo celular (em primeiro plano) */}
-              <div className="relative z-10 shadow-xl rounded-3xl overflow-hidden w-72 h-[34rem] border-8 border-[#292826]">
-                <div className="w-full h-full bg-[#292826]">
-                  <img 
-                    src={config.images.mobility.phone2}
-                    alt="ZappyBot no celular" 
-                    className="w-full h-full object-cover opacity-80"
-                  />
-                </div>
+            <div className="relative w-full max-w-md bg-[#292826]/50 p-4 border border-dashed border-[#ffbd2f] rounded-xl flex items-center justify-center">
+              <div className="text-center p-8">
+                <div className="text-[#ffbd2f] text-6xl mb-4">📱</div>
+                <p className="text-white">Espaço reservado para imagem de dispositivo móvel</p>
+                <p className="text-gray-400 text-sm mt-2">Dimensão recomendada: 375x667px</p>
               </div>
             </div>
           </div>
