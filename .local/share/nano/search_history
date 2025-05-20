@@ -1,7 +1,0 @@
-upload_max_filesize
-post_max_size
-root /var/www/zappybot-site;
-root
-
-
-

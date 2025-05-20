@@ -13,7 +13,6 @@ import FAQSection from '@/components/FAQSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import ZappynSection from '@/components/ZappynSection';
-import IntegrationsCarousel from '@/components/IntegrationsCarousel';
 // Importando o hook de configuração para estar disponível em toda a aplicação
 import { useSiteConfig } from '@/hooks/useSiteConfig';
 
@@ -28,7 +27,6 @@ const Index = () => {
       <BenefitsSection />
       <FeaturesSection />
       <MobilitySection />
-      <IntegrationsCarousel />
       <VideoTabsSection />
       <EnhancedFeaturesSection />
       <ZappynSection />
