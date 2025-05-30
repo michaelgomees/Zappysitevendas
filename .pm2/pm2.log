@@ -1,0 +1,335 @@
+2025-05-14T22:57:10: PM2 log: ===============================================================================
+2025-05-14T22:57:10: PM2 log: --- New PM2 Daemon started ----------------------------------------------------
+2025-05-14T22:57:10: PM2 log: Time                 : Wed May 14 2025 22:57:10 GMT-0300 (Brasilia Standard Time)
+2025-05-14T22:57:10: PM2 log: PM2 version          : 6.0.6
+2025-05-14T22:57:10: PM2 log: Node.js version      : 22.15.1
+2025-05-14T22:57:10: PM2 log: Current arch         : x64
+2025-05-14T22:57:10: PM2 log: PM2 home             : /root/.pm2
+2025-05-14T22:57:10: PM2 log: PM2 PID file         : /root/.pm2/pm2.pid
+2025-05-14T22:57:10: PM2 log: RPC socket file      : /root/.pm2/rpc.sock
+2025-05-14T22:57:10: PM2 log: BUS socket file      : /root/.pm2/pub.sock
+2025-05-14T22:57:10: PM2 log: Application log path : /root/.pm2/logs
+2025-05-14T22:57:10: PM2 log: Worker Interval      : 30000
+2025-05-14T22:57:10: PM2 log: Process dump file    : /root/.pm2/dump.pm2
+2025-05-14T22:57:10: PM2 log: Concurrent actions   : 2
+2025-05-14T22:57:10: PM2 log: SIGTERM timeout      : 1600
+2025-05-14T22:57:10: PM2 log: Runtime Binary       : /usr/bin/node
+2025-05-14T22:57:10: PM2 log: ===============================================================================
+2025-05-14T23:15:41: PM2 log: PM2 successfully stopped
+2025-05-14T23:16:08: PM2 log: ===============================================================================
+2025-05-14T23:16:08: PM2 log: --- New PM2 Daemon started ----------------------------------------------------
+2025-05-14T23:16:08: PM2 log: Time                 : Wed May 14 2025 23:16:08 GMT-0300 (Brasilia Standard Time)
+2025-05-14T23:16:08: PM2 log: PM2 version          : 6.0.6
+2025-05-14T23:16:08: PM2 log: Node.js version      : 22.15.1
+2025-05-14T23:16:08: PM2 log: Current arch         : x64
+2025-05-14T23:16:08: PM2 log: PM2 home             : /root/.pm2
+2025-05-14T23:16:08: PM2 log: PM2 PID file         : /root/.pm2/pm2.pid
+2025-05-14T23:16:08: PM2 log: RPC socket file      : /root/.pm2/rpc.sock
+2025-05-14T23:16:08: PM2 log: BUS socket file      : /root/.pm2/pub.sock
+2025-05-14T23:16:08: PM2 log: Application log path : /root/.pm2/logs
+2025-05-14T23:16:08: PM2 log: Worker Interval      : 30000
+2025-05-14T23:16:08: PM2 log: Process dump file    : /root/.pm2/dump.pm2
+2025-05-14T23:16:08: PM2 log: Concurrent actions   : 2
+2025-05-14T23:16:08: PM2 log: SIGTERM timeout      : 1600
+2025-05-14T23:16:08: PM2 log: Runtime Binary       : /usr/bin/node
+2025-05-14T23:16:08: PM2 log: ===============================================================================
+2025-05-18T22:37:38: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:37:39: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:37:39: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:39: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:37:39: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:37:40: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:40: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:37:40: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:37:40: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:40: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:37:40: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:37:41: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:41: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:37:41: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:37:42: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:42: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:37:42: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:37:42: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:42: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:37:42: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:37:43: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:43: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:37:43: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:37:43: PM2 log: App [zappysitevendas:1] starting in -fork mode-
+2025-05-18T22:37:43: PM2 log: App [zappysitevendas:1] online
+2025-05-18T22:37:43: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:43: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:37:43: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:37:44: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:44: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:37:44: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:37:44: PM2 log: App [zappysitevendas:1] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:44: PM2 log: App [zappysitevendas:1] starting in -fork mode-
+2025-05-18T22:37:44: PM2 log: App [zappysitevendas:1] online
+2025-05-18T22:37:44: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:44: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:37:44: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:37:44: PM2 log: App [zappysitevendas:1] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:44: PM2 log: App [zappysitevendas:1] starting in -fork mode-
+2025-05-18T22:37:44: PM2 log: App [zappysitevendas:1] online
+2025-05-18T22:37:45: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:45: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:37:45: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:37:45: PM2 log: App [zappysitevendas:1] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:45: PM2 log: App [zappysitevendas:1] starting in -fork mode-
+2025-05-18T22:37:45: PM2 log: App [zappysitevendas:1] online
+2025-05-18T22:37:45: PM2 log: App [zappysitevendas:1] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:45: PM2 log: App [zappysitevendas:1] starting in -fork mode-
+2025-05-18T22:37:45: PM2 log: App [zappysitevendas:1] online
+2025-05-18T22:37:45: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:45: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:37:45: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:37:46: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:46: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:37:46: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:37:46: PM2 log: App [zappysitevendas:1] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:46: PM2 log: App [zappysitevendas:1] starting in -fork mode-
+2025-05-18T22:37:46: PM2 log: App [zappysitevendas:1] online
+2025-05-18T22:37:46: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:46: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:37:46: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:37:47: PM2 log: App [zappysitevendas:1] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:47: PM2 log: App [zappysitevendas:1] starting in -fork mode-
+2025-05-18T22:37:47: PM2 log: App [zappysitevendas:1] online
+2025-05-18T22:37:47: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:47: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:37:47: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:37:47: PM2 log: App [zappysitevendas:1] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:47: PM2 log: App [zappysitevendas:1] starting in -fork mode-
+2025-05-18T22:37:47: PM2 log: App [zappysitevendas:1] online
+2025-05-18T22:37:48: PM2 log: App [zappysitevendas:1] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:48: PM2 log: App [zappysitevendas:1] starting in -fork mode-
+2025-05-18T22:37:48: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:48: PM2 log: Script /usr/bin/npm had too many unstable restarts (16). Stopped. "errored"
+2025-05-18T22:37:48: PM2 log: App [zappysitevendas:1] online
+2025-05-18T22:37:48: PM2 log: App [zappysitevendas:1] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:48: PM2 log: App [zappysitevendas:1] starting in -fork mode-
+2025-05-18T22:37:48: PM2 log: App [zappysitevendas:1] online
+2025-05-18T22:37:49: PM2 log: App [zappysitevendas:1] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:49: PM2 log: App [zappysitevendas:1] starting in -fork mode-
+2025-05-18T22:37:49: PM2 log: App [zappysitevendas:1] online
+2025-05-18T22:37:49: PM2 log: App [zappysitevendas:1] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:49: PM2 log: App [zappysitevendas:1] starting in -fork mode-
+2025-05-18T22:37:49: PM2 log: App [zappysitevendas:1] online
+2025-05-18T22:37:50: PM2 log: App [zappysitevendas:1] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:50: PM2 log: App [zappysitevendas:1] starting in -fork mode-
+2025-05-18T22:37:50: PM2 log: App [zappysitevendas:1] online
+2025-05-18T22:37:50: PM2 log: App [zappysitevendas:1] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:50: PM2 log: App [zappysitevendas:1] starting in -fork mode-
+2025-05-18T22:37:50: PM2 log: App [zappysitevendas:1] online
+2025-05-18T22:37:51: PM2 log: App [zappysitevendas:1] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:51: PM2 log: App [zappysitevendas:1] starting in -fork mode-
+2025-05-18T22:37:51: PM2 log: App [zappysitevendas:1] online
+2025-05-18T22:37:51: PM2 log: App [zappysitevendas:1] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:51: PM2 log: App [zappysitevendas:1] starting in -fork mode-
+2025-05-18T22:37:51: PM2 log: App [zappysitevendas:1] online
+2025-05-18T22:37:52: PM2 log: App [zappysitevendas:1] exited with code [1] via signal [SIGINT]
+2025-05-18T22:37:52: PM2 log: Script /usr/bin/npm had too many unstable restarts (16). Stopped. "errored"
+2025-05-18T22:37:58: PM2 log: Stopping app:zappysitevendas id:0
+2025-05-18T22:37:58: PM2 error: app=zappysitevendas id=0 does not have a pid
+2025-05-18T22:38:58: PM2 log: Stopping app:zappysitevendas id:1
+2025-05-18T22:38:58: PM2 error: app=zappysitevendas id=1 does not have a pid
+2025-05-18T22:38:59: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:38:59: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:38:59: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:38:59: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:38:59: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:39:00: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:39:00: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:39:00: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:39:00: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:39:00: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:39:00: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:39:01: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:39:01: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:39:01: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:39:02: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:39:02: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:39:02: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:39:03: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:39:03: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:39:03: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:39:04: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:39:04: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:39:04: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:39:04: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:39:04: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:39:04: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:39:05: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:39:05: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:39:05: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:39:05: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:39:05: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:39:05: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:39:06: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:39:06: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:39:06: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:39:07: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:39:07: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:39:07: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:39:07: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:39:07: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:39:07: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:39:08: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:39:08: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:39:08: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:39:09: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:39:09: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:39:09: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:39:09: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:39:09: PM2 log: Script /usr/bin/npm had too many unstable restarts (16). Stopped. "errored"
+2025-05-18T22:41:36: PM2 log: Stopping app:zappysitevendas id:0
+2025-05-18T22:41:36: PM2 error: app=zappysitevendas id=0 does not have a pid
+2025-05-18T22:41:36: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:41:36: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:41:37: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:41:37: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:41:37: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:41:38: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:41:38: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:41:38: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:41:38: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:41:38: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:41:38: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:41:39: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:41:39: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:41:39: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:41:39: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:41:39: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:41:39: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:41:40: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:41:40: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:41:40: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:41:40: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:41:40: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:41:40: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:41:41: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:41:41: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:41:41: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:41:42: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:41:42: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:41:42: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:41:42: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:41:42: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:41:42: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:41:43: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:41:43: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:41:43: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:41:43: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:41:43: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:41:43: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:41:44: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:41:44: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:41:44: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:41:44: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:41:44: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:41:44: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:41:45: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:41:45: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-18T22:41:45: PM2 log: App [zappysitevendas:0] online
+2025-05-18T22:41:45: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-18T22:41:45: PM2 log: Script /usr/bin/npm had too many unstable restarts (16). Stopped. "errored"
+2025-05-19T07:23:20: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:23:20: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:23:21: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:23:21: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:23:21: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:23:22: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:23:22: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:23:22: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:23:22: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:23:22: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:23:22: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:23:23: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:23:23: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:23:23: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:23:23: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:23:23: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:23:23: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:23:24: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:23:24: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:23:24: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:23:25: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:23:25: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:23:25: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:23:25: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:23:25: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:23:25: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:23:26: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:23:26: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:23:26: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:23:26: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:23:26: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:23:26: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:23:27: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:23:27: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:23:27: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:23:27: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:23:27: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:23:27: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:23:28: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:23:28: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:23:28: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:23:28: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:23:28: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:23:28: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:23:29: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:23:29: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:23:29: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:23:29: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:23:29: PM2 log: Script /usr/bin/npm had too many unstable restarts (16). Stopped. "errored"
+2025-05-19T07:24:22: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:24:22: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:24:23: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:24:23: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:24:23: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:24:24: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:24:24: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:24:24: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:24:24: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:24:24: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:24:24: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:24:25: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:24:25: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:24:25: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:24:25: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:24:25: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:24:25: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:24:26: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:24:26: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:24:26: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:24:27: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:24:27: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:24:27: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:24:27: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:24:27: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:24:27: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:24:28: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:24:28: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:24:28: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:24:28: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:24:28: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:24:28: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:24:29: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:24:29: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:24:29: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:24:29: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:24:29: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:24:29: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:24:30: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:24:30: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:24:30: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:24:31: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:24:31: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:24:31: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:24:31: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:24:31: PM2 log: App [zappysitevendas:0] starting in -fork mode-
+2025-05-19T07:24:31: PM2 log: App [zappysitevendas:0] online
+2025-05-19T07:24:32: PM2 log: App [zappysitevendas:0] exited with code [1] via signal [SIGINT]
+2025-05-19T07:24:32: PM2 log: Script /usr/bin/npm had too many unstable restarts (16). Stopped. "errored"

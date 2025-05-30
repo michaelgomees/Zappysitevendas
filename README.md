@@ -1,73 +1,60 @@
-# Welcome to your Lovable project
 
-## Project info
+# ZappyBot Website
 
-**URL**: https://lovable.dev/projects/a24a5673-a9e8-4784-bcce-7c83230591e8
+## Troubleshooting Package.json Errors
 
-## How can I edit this code?
+If you're experiencing errors related to missing package.json, particularly with `/dev-server/package.json`, try the following solutions in order:
 
-There are several ways of editing your application.
+### Solution 1: Use the NPM Bypass Script (Recommended)
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/a24a5673-a9e8-4784-bcce-7c83230591e8) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+node npm-bypass.js
 ```
 
-**Edit a file directly in GitHub**
+This script attempts multiple methods to start the application without relying on npm or package.json.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Solution 2: Run the Bootstrap Script
 
-**Use GitHub Codespaces**
+```
+node src/bootstrap.js
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This will create package.json files in all required locations.
 
-## What technologies are used for this project?
+### Solution 3: Use the Start App Script
 
-This project is built with:
+```
+node start-app.js
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Solution 4: Use the Direct Start Script
 
-## How can I deploy this project?
+```
+node direct-start.js
+```
 
-Simply open [Lovable](https://lovable.dev/projects/a24a5673-a9e8-4784-bcce-7c83230591e8) and click on Share -> Publish.
+### Solution 5: Manual Directory Creation (if permissions are an issue)
 
-## Can I connect a custom domain to my Lovable project?
+```
+sudo mkdir -p /dev-server
+sudo chmod 777 /dev-server
+node src/bootstrap.js
+node start-app.js
+```
 
-Yes, you can!
+### Solution 6: Use Environment Variable to Skip Checks
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```
+SKIP_PACKAGE_JSON_CHECK=true npx vite
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Solution 7: Get More Help
+
+```
+node dev-help.js
+```
+
+## Development
+
+Once you've resolved the package.json issues, the application should be accessible at [http://localhost:8080](http://localhost:8080).
+
