@@ -5,44 +5,65 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
-    --card: 38 3% 15%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
-    --popover: 38 3% 15%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 43 100% 59%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 38 3% 15%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
 
-    --muted: 38 3% 15%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 38 3% 15%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 38 3% 25%;
-    --input: 38 3% 25%;
-    --ring: 43 100% 59%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
 
     --radius: 0.5rem;
+  }
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
   }
 }
 
@@ -50,74 +71,7 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
   }
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Adiciona espaçamento para as âncoras devido ao header fixo */
-html :target {
-  scroll-margin-top: 100px;
-}
-
-/* Estilos para tabs de vídeo */
-.tabs-container .tab-content {
-  display: none;
-}
-
-.tabs-container .tab-content.active {
-  display: block;
-}
-
-.feature-icon {
-  transition: transform 0.3s ease;
-}
-
-.feature-box:hover .feature-icon {
-  transform: scale(1.1);
-}
-
-/* Adicionando efeitos de glassmorphism e animações sutis */
-.glass-effect {
-  @apply backdrop-blur-sm bg-[#292826]/80 border border-[#ffbd2f]/10 shadow-lg;
-  transition: all 0.3s ease;
-}
-
-.hover-glow:hover {
-  @apply shadow-[0_0_15px_2px_rgba(255,189,47,0.3)] transition-shadow duration-300;
-}
-
-/* Animação de pulsação */
-@keyframes pulse-glow {
-  0%, 100% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 1;
-    box-shadow: 0 0 20px 5px rgba(255, 189, 47, 0.3);
-  }
-}
-
-.pulse-animation {
-  animation: pulse-glow 3s infinite;
-}
-
-/* Adicionando efeitos de hover para cards de funcionalidades */
-.glass-effect:hover {
-  @apply shadow-[0_5px_15px_rgba(255,189,47,0.2)];
-  transform: translateY(-2px);
-}
-
-/* Efeito de transição para ícones */
-.text-[#FFBD2F] {
-  transition: transform 0.2s ease;
-}
-
-li:hover .text-[#FFBD2F] {
-  transform: scale(1.2);
 }
